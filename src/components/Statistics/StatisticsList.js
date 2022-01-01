@@ -1,5 +1,4 @@
 
-// import Statistics from './Statistics';
 
 export default function StatisticsList({ items }) {
     return (

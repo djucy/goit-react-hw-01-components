@@ -1,6 +1,8 @@
 import user from './components/Profile/user.json';
 import Profile from './components/Profile/Profile';
 import StatisticsSection from './components/Statistics/StatisticsSection';
+import FriendList from './components/FriendList/FriendList';
+import friends from './components/FriendList/friends.json';
 
 export default function App() {
     return <div>
@@ -11,7 +13,8 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
         />
-    <StatisticsSection/>
+        <StatisticsSection />
+        <FriendList items={friends }/>
         {/* <StatisticsList items={ data}/> */}
     </div>
 }
