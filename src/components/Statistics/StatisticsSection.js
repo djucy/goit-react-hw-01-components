@@ -10,10 +10,3 @@ export default function StatisticsSection({ title, children }) {
 
     )
 }
-//  Upload stats
-
-{/* <section class="statistics">
-  <h2 class="title">Upload stats</h2>
-
-  <ul class="stat-list"></ul>
-</section> */}

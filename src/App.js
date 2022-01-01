@@ -3,6 +3,8 @@ import Profile from './components/Profile/Profile';
 import StatisticsSection from './components/Statistics/StatisticsSection';
 import FriendList from './components/FriendList/FriendList';
 import friends from './components/FriendList/friends.json';
+import TransactionHistory from './components/Transactions/TransactionHistory';
+import transactions from './components/Transactions/transactions.json'
 
 export default function App() {
     return <div>
@@ -15,7 +17,7 @@ export default function App() {
         />
         <StatisticsSection />
         <FriendList items={friends }/>
-        {/* <StatisticsList items={ data}/> */}
+        <TransactionHistory items={transactions }/>
     </div>
 }
 
