@@ -1,12 +1,20 @@
 import data from './data.json';
 import StatisticsList from './StatisticsList';
+import {
+  Container,
+  ContentPosition,
+  Section,
+} from '../CommonStyle/Container.styled';
 
 export default function StatisticsSection({ title, children }) {
-    return (<section className="statistics">
+  return (
+    <Container>
+      <Section>
+        {/* <ContentPosition> */}
         {title && <h2 className="title">{title}</h2>}
-        {<StatisticsList items={ data}/>}
-        </section>
-
-
-    )
+        <StatisticsList items={data} />
+        {/* </ContentPosition> */}
+      </Section>
+    </Container>
+  );
 }
