@@ -1,15 +1,16 @@
+import {
+  FriendListStatOnline,
+  FriendItem,
+  FriendAvatar,
+} from './FriendList.styled';
+import { ProfileName } from '../Profile/Profile.styled';
 
-export default function FriendListItem({id, isOnline,avatar,name}) {
-    
-   
-               return( 
-                   < li className="item" key={id} >
-                       <span className="status">{isOnline}</span>
-                    <img className="avatar" src={avatar} alt="User avatar" width="48" />
-                       <p className="name">{name}</p>
-                     </li > 
-                )
-          
-        
-    }
-
+export default function FriendListItem({ id, isOnline, avatar, name }) {
+  return (
+    <FriendItem key={id}>
+      <FriendListStatOnline isOnline={isOnline}></FriendListStatOnline>
+      <FriendAvatar src={avatar} alt="User avatar" width="64" />
+      <ProfileName>{name}</ProfileName>
+    </FriendItem>
+  );
+}
