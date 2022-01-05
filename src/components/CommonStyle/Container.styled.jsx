@@ -7,9 +7,9 @@ margin-left:auto;
 margin-right:auto;
 `
 export const ContentPosition = styled.div `
-display: flex;
+display: grid;
 justify-content:center;
-
+${'' /* flex-direction:column; */}
 `
 export const Section = styled.section`
 padding-top:30px;

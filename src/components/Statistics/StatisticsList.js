@@ -1,14 +1,18 @@
-
+import {
+  LabelStatistics,
+  StatisticsPercentage,
+  StatisticsItem,
+} from './Statistics.styled';
 
 export default function StatisticsList({ items }) {
-    return (
-        <ul className="stat-list">
-            {items.map(item => ( 
-               <li className="item" key={item.id}>
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}</span>
-        </li>
-        ))}
-    </ul>)
+  return (
+    <ul className="stat-list">
+      {items.map(item => (
+        <StatisticsItem key={item.id}>
+          <LabelStatistics>{item.label}</LabelStatistics>
+          <StatisticsPercentage>{item.percentage}</StatisticsPercentage>
+        </StatisticsItem>
+      ))}
+    </ul>
+  );
 }
- 

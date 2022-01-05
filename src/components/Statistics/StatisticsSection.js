@@ -5,15 +5,17 @@ import {
   ContentPosition,
   Section,
 } from '../CommonStyle/Container.styled';
+// import { StatContentPosition } from './Statistics.styled';
+import { StatisticsTitle } from './Statistics.styled';
 
 export default function StatisticsSection({ title, children }) {
   return (
     <Container>
       <Section>
-        {/* <ContentPosition> */}
-        {title && <h2 className="title">{title}</h2>}
-        <StatisticsList items={data} />
-        {/* </ContentPosition> */}
+        <ContentPosition>
+          {title && <StatisticsTitle>{title}</StatisticsTitle>}
+          <StatisticsList items={data} />
+        </ContentPosition>
       </Section>
     </Container>
   );
