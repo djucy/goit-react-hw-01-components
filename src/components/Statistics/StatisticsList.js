@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   LabelStatistics,
   StatisticsPercentage,
@@ -16,3 +18,13 @@ export default function StatisticsList({ items }) {
     </ul>
   );
 }
+
+StatisticsList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }),
+  ),
+};

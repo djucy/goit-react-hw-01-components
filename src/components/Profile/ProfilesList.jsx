@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import Profile from './Profile';
 import {
   Container,
@@ -28,4 +29,10 @@ export default function ProfilesList({ items }) {
       </Section>
     </Container>
   );
+}
+
+ProfilesList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape
+  )
 }

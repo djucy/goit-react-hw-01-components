@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import data from './data.json';
 import StatisticsList from './StatisticsList';
 import {
@@ -20,3 +21,7 @@ export default function StatisticsSection({ title, children }) {
     </Container>
   );
 }
+
+StatisticsSection.propTypes = {
+  title: PropTypes.string,
+};

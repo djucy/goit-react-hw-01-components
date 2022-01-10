@@ -1,10 +1,12 @@
-import { Container, ContentPosition } from '../CommonStyle/Container.styled';
+import PropTypes from 'prop-types';
+import { Container, ContentPosition, Section } from '../CommonStyle/Container.styled';
 import FriendListItem from './FriendListItem';
 
 export default function FriendList({ items }) {
   return (
     <Container>
       <ContentPosition>
+        <Section>
         <ul className="friend-list">
           {items.map(item => (
             <FriendListItem
@@ -15,16 +17,15 @@ export default function FriendList({ items }) {
             />
           ))}
         </ul>
+        </Section>
       </ContentPosition>
     </Container>
   );
 }
 
-{
-  /*  */
-}
-{
-  /* <ul class="friend-list">
-  <!-- Произвольное кол-во FriendListItem -->
-</ul> */
+FriendList.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape
+  )
+
 }

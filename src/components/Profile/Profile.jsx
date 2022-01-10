@@ -8,7 +8,6 @@ import {
   ProfileStatsQuantity,
   ProfileCardColor,
   ProfileImage,
-  ProfileImageBox,
 } from './Profile.styled';
 // import { Container } from '../CommonStyle/Container.styled';
 
@@ -55,4 +54,3 @@ Profile.propTypes = {
   stats: PropTypes.object.isRequired,
 };
 
-// div className="description"

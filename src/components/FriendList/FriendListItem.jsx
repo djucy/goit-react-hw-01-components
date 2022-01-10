@@ -1,10 +1,11 @@
+import PropTypes from 'prop-types';
 import {
   FriendListStatOnline,
   FriendItem,
   FriendAvatar,
   FriendName,
 } from './FriendList.styled';
-import { ProfileName } from '../Profile/Profile.styled';
+
 
 export default function FriendListItem({ id, isOnline, avatar, name }) {
   return (
@@ -14,4 +15,11 @@ export default function FriendListItem({ id, isOnline, avatar, name }) {
       <FriendName>{name}</FriendName>
     </FriendItem>
   );
+}
+ 
+FriendListItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 }
